@@ -65,7 +65,7 @@ def main():
                 result = 'Positive'
             else:
                 result = 'Negative'
-        st.success(f''The EC3 value is {EC3_Value} and the chemical potency is {result}'')
+        st.success(f'The EC3 value is {EC3_Value} and the chemical potency is {result}')
     
 if __name__=='__main__':
     main()
