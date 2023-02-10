@@ -41,7 +41,7 @@ def main():
     # Convert the prediction back to the original scale
       min_max_values=(0,1)
       result = inverse_transform(result,min_max_values)#scaler.inverse_transform(result,min_max_values)
-      #result=result.reshape(1,1)
+      EC3_Value=result
       if result is not None:
         if prediction_type == "Three-class":
             if float(result) < (-1):
@@ -65,9 +65,7 @@ def main():
                 result = 'Positive'
             else:
                 result = 'Negative'
-        st.success(f'The chemical Potency is {result}')
-    else:
-        st.warning("Prediction failed, please check your inputs and try again.")
+        st.success(f''The EC3 value is {EC3_Value} and the chemical potency is {result}'')
     
 if __name__=='__main__':
     main()
