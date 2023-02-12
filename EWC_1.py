@@ -71,7 +71,7 @@ def main():
                 result = 'Strong'
             elif float(result) >= 0 and float(result) < 1:
                 result = 'Moderate'
-            elif float(result) >= 1:
+            elif float(result) <= 10:
                 result = 'Moderate'
             else:
                 result = 'Non'
@@ -82,7 +82,7 @@ def main():
                 result = 'Positive'
             elif float(result) >= 0 and float(result) < 1:
                 result = 'Positive'
-            elif float(result) >= 1:
+            elif float(result) <= 10:
                 result = 'Positive'
             else:
                 result = 'Negative'
