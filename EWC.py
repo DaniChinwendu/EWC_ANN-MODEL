@@ -76,7 +76,7 @@ def main():
       result=prediction_LOGEC3(X, scaler, model)
     # Convert the prediction back to the original scale
       
-      result =target.inverse_transform(result)
+      result = inverse_transform(result)
       EC3_Value=result
       if result is not None:
         if prediction_type == "Three-class":
