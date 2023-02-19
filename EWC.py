@@ -76,7 +76,7 @@ def main():
       result=prediction_LOGEC3(X, scaler, model)
     # Convert the prediction back to the original scale
       min_max_values=(0,1)
-      result = inverse_transform(result,min_max_values)
+      result = inverse_transform(result)
       EC3_Value=result
       if result is not None:
         if prediction_type == "Three-class":
