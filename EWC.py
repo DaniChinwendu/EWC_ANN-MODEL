@@ -4,8 +4,8 @@ import pandas as pd
 import streamlit as st
 #collect the model and min-max object file
 filename ='EWC_1.pkl' 
-scaler='minmax_scaler.pkl'
-target='minmax_target(1).pkl'
+scaler= 'minmax_scaler.pkl'
+target= 'minmax_target(1).pkl'
 
 def load_model():
     return pickle.load(open(filename,'rb'))
@@ -19,7 +19,7 @@ def target_scaler():
 
 model = load_model()
 scaler = load_scaler()
-target=target_scaler()
+target= target_scaler()
 
 def welcome():
     return "Welcome All"
