@@ -74,7 +74,7 @@ def main():
       
     # Call the prediction function
       result=prediction_LOGEC3(X, scaler, model)
-      result = result.reshape(-1, 1)
+     
     # Convert the prediction back to the original scale
     
       
@@ -87,9 +87,9 @@ def main():
             elif float(result) >= (-1) and float(result) < 0:
                 result = 'Strong'
             elif float(result) >= 0 and float(result) < 1:
-                result = 'Moderate'
+                result = 'weak'
             elif float(result) >1:
-                result = 'Moderate'
+                result = 'Weak'
             else:
                 result = 'Non'
         else:
