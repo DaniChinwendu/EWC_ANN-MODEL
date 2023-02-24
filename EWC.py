@@ -74,7 +74,9 @@ def main():
       
     # Call the prediction function
       result=prediction_LOGEC3(X, scaler, model)
+      result = result.reshape(-1, 1)
     # Convert the prediction back to the original scale
+    
       
       result = inverse_transform(result)
       EC3_Value=result
