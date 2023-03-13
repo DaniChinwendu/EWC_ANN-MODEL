@@ -67,8 +67,6 @@ def main():
     log_hCLAT_MIT = min(CD86_EC150, CD54_EC200, CV75)
     log_hCLAT_MIT=convert_to_log10(log_hCLAT_MIT )
     X= np.array([[log_DPRA_mean,log_hCLAT_MIT]])
-    
-    prediction_type = st.selectbox("Select prediction type:", ["Two-class", "Three-class"])
     if st.button("Predict"):
      
       
@@ -81,28 +79,17 @@ def main():
       result = inverse_transform(result)
       EC3_Value=result
       if result is not None:
-        if prediction_type == "Three-class":
-            if float(result) < (-1):
-                result = 'Strong'
-            elif float(result) >= (-1) and float(result) < 0:
-                result = 'Strong'
-            elif float(result) >= 0 and float(result) < 1:
-                result = 'weak'
-            elif float(result) >1:
-                result = 'Weak'
-            else:
-                result = 'Non'
+        if float(result) < (-1):
+            result = 'Strong'
+        elif float(result) >= (-1) and float(result) < 0:
+            result = 'Strong'
+        elif float(result) >= 0 and float(result) < 1:
+            result = 'weak'
+        elif float(result) >1:
+            result = 'Weak'
         else:
-            if float(result) < (-1):
-                result = 'Positive'
-            elif float(result) >= (-1) and float(result) < 0:
-                result = 'Positive'
-            elif float(result) >= 0 and float(result) < 1:
-                result = 'Positive'
-            elif float(result) >1:
-                result = 'Positive'
-            else:
-                result = 'Negative'
+            result = 'Non'
+        
         st.success(f'The EC3 value is {EC3_Value} and the chemical potency is {result}')
 
 if __name__=='__main__':
