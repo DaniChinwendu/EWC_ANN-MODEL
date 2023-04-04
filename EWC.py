@@ -49,14 +49,14 @@ def main():
     if st.button('INFORMATION ABOUT THIS WEB APP BEFORE USE'):
           st.write("The Edelweiss ITS skin sensitization model predicts the Murine local lymph node assay (LLNA) EC3 value of a substance. The model uses Adverse Outcome Pathway data obtained from in-chemo and invitro assays to reflect the underlying immune response that leads to skin sensitization.")
           st.header('TRAIN DATA')
-          st.write('The EWC-1 model is trained using the direct peptide reactivity assay (DPRA) and  Human cell line activation assay data(h-CLAT) data. The DPRA assay is an in-chemo assay that measures a substances ability to form a hapten-protein complex while the human Cell line activation assay is an in-vitro test that accesses the ability of a substance to induce or mobilize dendric cells in the skin. Results from DPRA reflect the molecular initiating event in AOP for skin sensitization the first key event in Skin Sensitization Adverse outcome pathway.Both tests are part of the integrated testing strategies for skin sensitization as stipulated by OECD.')
-          st.write('The model is trained on Human cell line activation assay data(h-CLAT). h-CLAT also known as human Cell line activation assay is an in-vitro test that access the ability of a substance to induce or mobilize dendric cell in the skin')
+          st.write('The EWC-1 model is trained using the direct peptide reactivity assay (DPRA) and  Human cell line activation assay data(h-CLAT) data. The DPRA assay is an in-chemo assay that measures a substances ability to form a hapten-protein complex while the human Cell line activation assay is an in-vitro test that accesses the ability of a substance to induce or mobilize dendric cells in the skin. Results from DPRA and h-CLAT reflect the molecular initiating event in AOP for skin sensitization the first key event in Skin Sensitization Adverse outcome pathway.Both tests are part of the integrated testing strategies for skin sensitization as stipulated by OECD.')
+       
           st.header('WEB APP INPUT')
-          st.write('The Web app utilizes log transformed input data for DPRA and h-CLAT. to aid robust and précised prediction capabilities the model accepts the following input parameter. The model accepts this input and automatically select the right input used for making prediction.')
+          st.write('The Web app utilizes input data for DPRA and h-CLAT assay to aid robust and précised prediction capabilities. the model accepts the following input parameter. The model accepts this input,Transforms them and automatically select the right input used for making prediction.')
           st.write('DPRA – Average of DPRA Lysine AND DPRA Cystine Depletion Values')
           st.write('h-CLAT - Minimum of CD86-EC150, CD54-EC200, and CV75')
           st.header('EXTRA INFORMATION')
-          st.write('in certain condition wHere CD86_EC150 and CD54_EC200 isnt avaliable CV75 should be used wile the other inputs are parametered at 0.1') 
+          st.write('in certain condition wHere CD86_EC150, CD54_EC200 any any other input isnt avaliable CV75 should be used while the other unavaliable  inputs are set at 0.1') 
     st.markdown(html_temp, unsafe_allow_html=True)
     DPRA_LysD = st.number_input("DPRA LysD", min_value=0.1, max_value=100.0, value=1.0, step=1.0,)
     DPRA_CysD = st.number_input("DPRA CysD", min_value=0.1, max_value=100.0, value=1.0, step=1.0,)
