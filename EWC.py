@@ -44,7 +44,7 @@ def main():
     st.title(" EDELWEISS CONNECT ITS SKIN SENSITIZATION SOLUTION ")
     st.markdown('An Artificial Neural Network Regression model Utilizing invitro and inchemo(h-CLAT,DPRA) assay Descriptors for predicting skin Sensitization EC3 values')
     html_temp = """
-    EWC-1 SKIN SENSITIZATION PREDICTION App 
+    EWC-1 SKIN SENSITIZATION PREDICTION APP
     """
     if st.button('INFORMATION ABOUT THIS WEB APP BEFORE USE'):
           st.write("The Edelweiss ITS skin sensitization model predicts the Murine local lymph node assay (LLNA) EC3 value of a substance. The model uses Adverse Outcome Pathway data obtained from in-chemo and invitro assays to reflect the underlying immune response that leads to skin sensitization.")
