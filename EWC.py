@@ -63,9 +63,9 @@ def main():
     log_DPRA_mean = (DPRA_LysD + DPRA_CysD) / 2
     log_DPRA_mean=convert_to_log10(log_DPRA_mean)
 
-    CD86_EC150= st.number_input("CD86_EC150 ", min_value=0.1, max_value=5000.0, value=1.0, step=1.0)
-    CD54_EC200 = st.number_input("CD54_EC200 ", min_value=0.1, max_value=5000.0, value=1.0, step=1.0)
-    CV75 = st.number_input("CV75", min_value=1.0, max_value=5000.0, value=10.0, step=1.0,)
+    CD86_EC150= st.number_input("CD86 EC150 ", min_value=0.1, max_value=5000.0, value=1.0, step=1.0)
+    CD54_EC200 = st.number_input("CD54 EC200 ", min_value=0.1, max_value=5000.0, value=1.0, step=1.0)
+    CV75 = st.number_input("CV75", min_value=1.0, max_value=5000.0, value=1.0, step=1.0,)
     log_hCLAT_MIT = min(CD86_EC150, CD54_EC200, CV75)
     log_hCLAT_MIT=convert_to_log10(log_hCLAT_MIT )
     X= np.array([[log_DPRA_mean,log_hCLAT_MIT]])
@@ -92,7 +92,7 @@ def main():
         else:
             result = 'Non'
         
-        st.success(f'The EC3 value is {EC3_Value} and the chemical potency is {result}')
+        st.success(f'The EC3 value is {EC3_Value.item()} and the chemical potency is {result}')
 
 if __name__=='__main__':
     main()
