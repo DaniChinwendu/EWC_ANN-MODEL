@@ -59,6 +59,8 @@ def main():
           st.header('LINK TO REFERENCE PAPERS')
           st.write('Original model by Hirota et al.,2015 [Orignal model](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/jat.3105)')
           st.write('Reference model by Kleinstreuer et al.,2018 [Reference Model](https://www.tandfonline.com/loi/itxc20)')
+          st.write('OECD guildline for LLNA assay [Guildline for LLNA assay](https://www.oecd.org/env/test-no-429-skin-sensitisation-9789264071100-en.htm)')
+          st.write('OECD guildline for in-vitro assay [Guildline for in-invitro assay](https://www.oecd.org/env/guidance-document-on-good-in-vitro-method-practices-givimp-9789264304796-en.htm)')
           st.header('EXTRA INFORMATION')
           st.write('in certain condition where CD86_EC150, CD54_EC200 any any other input isnt avaliable CV75 should be used while the other unavaliable  inputs are set at 0.1') 
     st.markdown(html_temp, unsafe_allow_html=True)
