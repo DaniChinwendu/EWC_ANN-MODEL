@@ -41,7 +41,7 @@ def convert_to_log10(input):
 
 
 def main():
-    st.title("'EDELWEISS CONNECT ITS SKIN SENSITIZATION SOLUTION'")
+    st.title(" EDELWEISS CONNECT ITS SKIN SENSITIZATION SOLUTION ")
     st.markdown('An Artificial Neural Network Regression model Utilizing invitro and inchemo(h-CLAT,DPRA) assay Descriptors for predicting skin Sensitization EC3 values')
     html_temp = """
     EWC-1 SKIN SENSITIZATION PREDICTION App 
@@ -79,7 +79,8 @@ def main():
     
       
       result = inverse_transform(result)
-      EC3_Value=result
+      EC3_Value=result.item()
+      EC3_Value=round(EC3_Value,2)
       if result is not None:
         if float(result) < (-1):
             result = 'Strong'
@@ -92,7 +93,7 @@ def main():
         else:
             result = 'Non'
         
-        st.success(f'The EC3 value is {EC3_Value.item()} and the chemical potency is {result}')
+        st.success(f'The EC3 value is {EC3_Value} and the chemical potency is {result}')
 
 if __name__=='__main__':
     main()
