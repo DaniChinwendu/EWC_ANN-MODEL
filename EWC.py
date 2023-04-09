@@ -53,7 +53,7 @@ def main():
        
           st.header('WEB APP INPUT')
           st.write('The Web app utilizes input data for DPRA and h-CLAT assay to aid robust and précised prediction capabilities. the model accepts the following input parameter. The model accepts this input,Transforms them and automatically select the right input used for making prediction.')
-          st.write('DPRA – Average of DPRA LysD AND DPRA CysD
+          st.write('DPRA – Average of DPRA LysD AND DPRA CysD')
           st.write('h-CLAT - Minimum of CD86-EC150, CD54-EC200, and CV75')
           
           st.header('LINK TO REFERENCE PAPERS')
